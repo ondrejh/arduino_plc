@@ -6,7 +6,6 @@
 #include <stdbool.h>
 
 #include "uart.h"
-#include "servo.h"
 
 #define TXBUFFLEN 64
 

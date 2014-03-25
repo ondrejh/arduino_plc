@@ -8,7 +8,7 @@
 MCU = atmega328p
 FORMAT = ihex
 TARGET = ardplc
-SRC = main.c uart.c
+SRC = main.c uart.c ds18b20.c crc8.c
 ASRC =
 OPT = s
 BASEADDR = 0x0000

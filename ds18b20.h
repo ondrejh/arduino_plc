@@ -13,7 +13,6 @@ typedef union{
 typedef struct {
     volatile uint8_t *port_out;
     const volatile uint8_t *port_in;
-    volatile uint8_t *port_ren;
     volatile uint8_t *port_dir;
     uint8_t port_mask;
 
@@ -25,7 +24,6 @@ typedef struct {
 void ds18b20_init(ds18b20_sensor_t *s,
                   volatile uint8_t *p_out,
                   const volatile uint8_t *p_in,
-                  volatile uint8_t *p_ren,
                   volatile uint8_t *p_dir,
                   int pin);
 
