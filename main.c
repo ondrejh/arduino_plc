@@ -29,6 +29,7 @@ int main(void)
         _delay_ms(750); // wait for conversion result (min 750ms)
         ds18b20_read_conversion(&s); // get data from sensor
         printdec(s.data.temp);
+
         /*sleep_enable();
         sleep_cpu();
         sleep_disable();*/
