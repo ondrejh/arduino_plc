@@ -7,15 +7,15 @@
 
 MCU = atmega328p
 FORMAT = ihex
-TARGET = finger
-SRC = main.c uart.c servo.c disp.c sens.c
+TARGET = ardplc
+SRC = main.c uart.c
 ASRC =
 OPT = s
 BASEADDR = 0x0000
 
 # arduino port settings
-PORT = /dev/ttyACM0
-# PORT = COM17
+# PORT = /dev/ttyACM0
+PORT = COM18
 # BAUDRATE = 9600
 BAUDRATE = 115200
 

@@ -158,14 +158,14 @@ SIGNAL (USART_RX_vect)
                         // do something
                         if (cmdadd=='-') value = -value;
 
-                        if (cmdadd!='?')
+                        /*if (cmdadd!='?')
                         {
                             if (cmd=='s') set_servo_position(value);
                         }
                         else
                         {
                             if (cmd=='s') printdec(get_servo_position());
-                        }
+                        }*/
                     }
                 }
                 break;
