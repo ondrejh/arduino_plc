@@ -1,4 +1,5 @@
-finglonger
+arduino plc
+
 ==========
 
-servo finger for remote button switching
+Arduino hardware based PLC like device.
