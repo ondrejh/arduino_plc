@@ -28,6 +28,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="crc8.h" />
+		<Unit filename="dht21.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dht21.h" />
 		<Unit filename="ds18b20.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -35,6 +39,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="timer.h" />
 		<Unit filename="uart.c">
 			<Option compilerVar="CC" />
 		</Unit>

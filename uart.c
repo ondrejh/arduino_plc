@@ -36,12 +36,33 @@ int8_t decc2int(char c)
     return -1; // error (no dec char)
 }
 
+int strlen(char* str)
+{
+    int cnt=0;
+    for(;;)
+    {
+        if (*str++=='\0') return cnt;
+        cnt++;
+    }
+}
+
+void strcp(char* deststr, char* str)
+{
+    char c;
+    do {
+        c=*str++;
+        *deststr++=c;
+    }
+    while (c!='\0');
+}
+
 /// print dec value
-void printdec(int dec)
+void sprint_int(char* str, int i)
 {
     bool neg = false;
     char s[7];
     int8_t ptr=0;
+    int dec = i;
 
     if (dec<0) {neg=true; dec=-dec;}
 
@@ -58,9 +79,10 @@ void printdec(int dec)
 
     do
     {
-        uart_putchar(s[ptr--]);
+        *str++ = s[ptr--];
     }
     while (ptr>=0);
+    *str++='\0';
 }
 
 /// uart putchar function
@@ -79,6 +101,23 @@ int8_t uart_putchar(uint8_t c)
     txbuf_inptr=next_bufptr;
     // return OK
     return 0;
+}
+
+/// printf
+uint8_t uart_puts(char* str)
+{
+    uint8_t cnt = 0;
+    char c = *str++;
+    while(c!='\0')
+    {
+        if (uart_putchar(c)==0)
+        {
+            c = *str++;
+            cnt++;
+        }
+        else break;
+    }
+    return cnt;
 }
 
 /// uart initialization
